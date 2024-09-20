@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "crispy_tailwind",
     "products",
     "users",
+    "orders",
 
 ]
 
@@ -55,6 +56,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'sub_app','media') 
+MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {
@@ -133,3 +136,4 @@ CRISPY_ALLOWEND_TEMPLATE_PACKS = "taildwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
 LOGIN_REDIRECT_URL = "list_product"
+LOGOUT_REDIRECT_URL = "list_product"

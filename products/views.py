@@ -14,7 +14,6 @@ class ProductFormView(generic.FormView):
         form.save()
         return super().form_valid(form)
     
-
 class ProductListView(generic.ListView):
     model = Product
     template_name = "products/list_product.html"
